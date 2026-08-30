@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian Bergen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;1,500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0e211c;
+    --stone:#eee7d6;
+    --stone-dim:#a9a08a;
+    --water:#2c9d94;
+    --line: rgba(238,231,214,0.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--stone);
+    font-family:'Work Sans', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 4.5rem 1.5rem 5rem;
+    text-align:center;
+  }
+  h1{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size:clamp(2rem, 5vw, 2.8rem);
+    margin:0 0 2.5rem;
+    color:var(--stone);
+  }
+  img{
+    max-width:100%;
+    width:520px;
+    border-radius:6px;
+    display:block;
+  }
+  .links{
+    width:520px;
+    max-width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin-top:1.5rem;
+  }
+  .links a{
+    color:var(--water);
+    text-decoration:none;
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    padding:0.4rem;
+  }
+  .links a:hover{ text-decoration:underline; }
+  .links a.left{ text-align:left; }
+  .links a.right{ text-align:right; }
+</style>
+</head>
+<body>
+  <h1>Brian Bergen</h1>
+  <img src="image000001.jpeg" alt="Brian and Megan">
+  <div class="links">
+    <a class="left" href="https://www.linkedin.com/in/brianmbergen" target="_blank" rel="noopener">LinkedIn Profile</a>
+    <a class="right" href="travel/croatia-2026/">2026 Croatia Trip</a>
+  </div>
+</body>
+</html>
