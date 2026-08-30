@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 — Croatia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;1,500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0e211c;
+    --stone:#eee7d6;
+    --stone-dim:#a9a08a;
+    --water:#2c9d94;
+    --line: rgba(238,231,214,0.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--stone);
+    font-family:'Work Sans', sans-serif;
+  }
+  header{
+    padding: 3.5rem 6vw 2rem;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-size:0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--water);
+    margin-bottom:0.6rem;
+  }
+  h1{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size:clamp(2rem, 5vw, 3.2rem);
+    margin:0;
+    color:var(--stone);
+  }
+  main{
+    padding: 2rem 6vw 5rem;
+  }
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:10px;
+  }
+  .gallery img{
+    width:100%;
+    aspect-ratio: 4/3;
+    object-fit:cover;
+    border-radius:2px;
+    cursor:zoom-in;
+    display:block;
+  }
+  @media (max-width: 820px){
+    .gallery{grid-template-columns:repeat(2, 1fr);}
+  }
+  .lightbox{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(6,14,12,0.95);
+    display:none;
+    align-items:center; justify-content:center;
+    padding:4vw;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:92vw; max-height:88vh; border-radius:2px;}
+  .lightbox-close{
+    position:absolute; top:2vw; right:3vw;
+    color:var(--stone); font-size:2rem; cursor:pointer;
+    font-family:'Newsreader',serif;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Travel</div>
+  <h1>2026 — Croatia</h1>
+</header>
+
+<main>
+  <div class="gallery" id="gallery"></div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  // --- EDIT THIS LIST for each trip ---
+  // Just the filenames, in whatever order you want them to appear.
+  const photos = [
+    "Croatia-01.jpg",
+    "Croatia-02.jpg",
+    "Croatia-03.jpg",
+    "Croatia-04.jpg",
+    "Croatia-05.jpg",
+    "Croatia-06.jpg",
+    "Croatia-07.jpg",
+    "Croatia-08.jpg",
+    "Croatia-09.jpg",
+    "Croatia-10.jpg",
+    "Croatia-11.jpg",
+    "Croatia-12.jpg",
+    "Croatia-13.jpg",
+    "Croatia-14.jpg",
+    "Croatia-15.jpg",
+    "Croatia-16.jpg",
+    "Croatia-17.jpg",
+    "Croatia-18.jpg",
+    "Croatia-19.jpg",
+    "Croatia-20.jpg",
+    "Croatia-21.jpg",
+    "Croatia-22.jpg",
+    "Croatia-23.jpg",
+    "Croatia-24.jpg",
+    "Croatia-25.jpg",
+    "Croatia-26.jpg",
+    "Croatia-27.jpg",
+    "Croatia-28.jpg",
+    "Croatia-29.jpg",
+    "Croatia-30.jpg",
+    "Croatia-31.jpg",
+    "Croatia-32.jpg",
+    "Croatia-33.jpg",
+    "Croatia-34.jpg",
+    "Croatia-35.jpg",
+    "Croatia-36.jpg",
+    "Croatia-37.jpg",
+    "Croatia-38.jpg",
+    "Croatia-39.jpg",
+    "Croatia-40.jpg",
+    "Croatia-41.jpg",
+    "Croatia-42.jpg",
+    "Croatia-43.jpg",
+    "Croatia-44.jpg",
+    "Croatia-45.jpg",
+    "Croatia-46.jpg",
+    "Croatia-47.jpg",
+    "Croatia-48.jpg",
+    "Croatia-49.jpg",
+    "Croatia-50.jpg",
+    "Croatia-51.jpg"
+  ];
+  // --------------------------------------
+
+  const gallery = document.getElementById('gallery');
+  photos.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.loading = 'lazy';
+    img.alt = '';
+    gallery.appendChild(img);
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  document.addEventListener('click', e => {
+    if(e.target.tagName === 'IMG' && e.target.closest('.gallery')){
+      lightboxImg.src = e.target.src;
+      lightbox.classList.add('open');
+    }
+  });
+  document.getElementById('lightboxClose').onclick = () => lightbox.classList.remove('open');
+  lightbox.onclick = e => { if(e.target === lightbox) lightbox.classList.remove('open'); };
+</script>
+
+</body>
+</html>
