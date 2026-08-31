@@ -5,40 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 — Croatia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;1,500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0e211c;
-    --stone:#eee7d6;
-    --stone-dim:#a9a08a;
-    --water:#2c9d94;
-    --line: rgba(238,231,214,0.14);
+    --ink:#1c2530;
+    --panel:#242f3d;
+    --stone:#e7eaef;
+    --stone-dim:#93a0b2;
+    --accent:#7b93b0;
+    --line: rgba(231,234,239,0.12);
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
     background:var(--ink);
     color:var(--stone);
-    font-family:'Work Sans', sans-serif;
+    font-family:'Inter', sans-serif;
   }
   header{
     padding: 3.5rem 6vw 2rem;
     border-bottom:1px solid var(--line);
   }
   .eyebrow{
+    font-family:'Libre Franklin', sans-serif;
+    font-weight:600;
     font-size:0.75rem;
-    letter-spacing:0.18em;
+    letter-spacing:0.16em;
     text-transform:uppercase;
-    color:var(--water);
+    color:var(--accent);
     margin-bottom:0.6rem;
   }
   h1{
-    font-family:'Newsreader', serif;
-    font-weight:500;
-    font-style:italic;
-    font-size:clamp(2rem, 5vw, 3.2rem);
+    font-family:'Libre Franklin', sans-serif;
+    font-weight:700;
+    font-size:clamp(2rem, 5vw, 3rem);
     margin:0;
     color:var(--stone);
+    letter-spacing:-0.01em;
   }
   main{
     padding: 2rem 6vw 5rem;
@@ -51,7 +54,7 @@
     width:100%;
     height:auto;
     display:block;
-    border-radius:2px;
+    border-radius:3px;
     cursor:zoom-in;
     margin-bottom:10px;
     break-inside:avoid;
@@ -61,17 +64,17 @@
   }
   .lightbox{
     position:fixed; inset:0; z-index:100;
-    background:rgba(6,14,12,0.95);
+    background:rgba(10,14,19,0.95);
     display:none;
     align-items:center; justify-content:center;
     padding:4vw;
   }
   .lightbox.open{display:flex;}
-  .lightbox img{max-width:92vw; max-height:88vh; border-radius:2px;}
+  .lightbox img{max-width:92vw; max-height:88vh; border-radius:3px;}
   .lightbox-close{
     position:absolute; top:2vw; right:3vw;
     color:var(--stone); font-size:2rem; cursor:pointer;
-    font-family:'Newsreader',serif;
+    font-family:'Libre Franklin',sans-serif;
   }
 </style>
 </head>
@@ -92,8 +95,7 @@
 </div>
 
 <script>
-  // --- EDIT THIS LIST for each trip ---
-  // Just the filenames, in whatever order you want them to appear.
+  // --- EDIT THIS LIST for each trip/gallery ---
   const photos = [
     "Croatia-01.jpg",
     "Croatia-02.jpg",
