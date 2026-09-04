@@ -187,11 +187,11 @@ a {
 }
 
 .trip-card--soon img {
-  opacity: 0.5;
+  opacity: 0.375;
 }
 
 .trip-card--soon:hover img {
-  opacity: 0.5;
+  opacity: 0.375;
 }
 
 .trip-card--soon .trip-card-label {
