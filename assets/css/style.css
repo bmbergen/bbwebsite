@@ -246,6 +246,15 @@ a {
 
 .gallery + .back-link {
   margin-top: 24px;
+  padding: 10px 28px;
+  border: 1px solid rgba(242, 242, 242, 0.35);
+  border-radius: 9999px;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.gallery + .back-link:hover {
+  background-color: rgba(242, 242, 242, 0.08);
+  border-color: rgba(242, 242, 242, 0.6);
 }
 
 .photo-block .caption {
