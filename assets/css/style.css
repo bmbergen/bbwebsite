@@ -244,6 +244,10 @@ a {
   margin: 18px 0 12px;
 }
 
+.gallery + .back-link {
+  margin-top: 24px;
+}
+
 .photo-block .caption {
   font-size: 0.95rem;
   color: rgba(242, 242, 242, 0.75);
